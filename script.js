@@ -37,7 +37,6 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         alert('Details not found. Please check your details.');
         document.getElementById("loginMessage").innerText = "Invalid Details";
         document.getElementById("loginMessage").style.backgroundColor = "red";
-      
       }
     })
     .catch(error => console.error('Error:', error));
@@ -52,19 +51,21 @@ function displayDetails(userDetails) {
     <p>Lottery Number: ${userDetails.lotteryNumber}</p>
     <p>Prize Name: Tata Nexon</p>
     <p>Prize Amount: RS. ${userDetails.prizeAmount}</p>
-    <p>Registration Fees: RS. <span class="indian-number">${userDetails.registrationCharge}</span></p>
-    <p>Sate: ${userDetails.state}</p>
+    <!--<p>Registration Fees: RS. <span class="indian-number">${userDetails.registrationCharge}</span></p>-->
+    <p>${userDetails.feesType}: Rs. <span class="indian-number">${userDetails.registrationCharge}</span></p>
+    <p>State: <span style="text-transform: capitalize;">${userDetails.state}</span></p>
     <p>Prize Status: <span style="color: red;">Not Claimed</span></p>
     <img src="car.jpeg" style="width: 100%; border-radius: 5px; pointer-events: none;"><br><br>
     <div style="border: 2px solid #0070cb; border-radius: 10px; border-sizing: border-box;">
-    <p style="font-size: 15px; background: #0070cb; padding: 5px; color: #fff;">Dear <span style="text-transform: capitalize;">${userDetails.name}</span>, Please continue your process by paying your Registration Charge Rs. <span class="indian-number">${userDetails.registrationCharge}</span> in company bank account.</p>
-    <!--<img src="qr.png" style="width: 200px; padding: 5px; pointer-events: none;"><br>-->
+    <p style="font-size: 15px; background: #0070cb; padding: 5px; color: #fff;">Dear <span style="text-transform: capitalize;">${userDetails.name}</span>, Please continue your process by paying your ${userDetails.feesType} Rs. <span class="indian-number">${userDetails.registrationCharge}</span> in company bank account.</p>
     <img src="https://api.qrserver.com/v1/create-qr-code/?data=upi://pay?pa=${userDetails.upi}%26cu=INR%26am=${userDetails.registrationCharge}" style="width: 200px; padding: 5px; pointer-events: none;"><br>
     <p><span style="color:#fff; background: #0070cb; padding: 5px 15px; border-radius: 5px; pointer-events: none;">SCAN TO PAY</span></p>
     </div>
     <p>--------X--------</p>
-    <p style="font-size: 16px;">*For Any Question or Issue, You Can Call Helpline No. +91 7849085082.</p>
-    <a href = "tel:+917849085082" style = "padding: 5px 10px; background: #00c04b; text-decoration: none; color: #fff; border-radius: 5px;">CALL NOW</a>
+    <div style="border: 2px solid #00c04b; border-radius: 10px; border-sizing: border-box;">
+    <p style="font-size: 15px; padding: 5px;">*For Any Question or Issue, You Can Call Helpline No. +91 7849085082.</p>
+    <p><a href = "tel:+917849085082" style = "padding: 5px 15px; background: #00c04b; text-decoration: none; color: #fff; border-radius: 5px;">CALL NOW</a></p>
+    </div>
   `;
 }
 
