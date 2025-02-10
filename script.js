@@ -63,8 +63,8 @@ function displayDetails(userDetails) {
     </div>
     <p style="display: none;">--------X--------</p>
     <div style="border: 2px solid #00c04b; border-radius: 10px; border-sizing: border-box;">
-    <p style="font-size: 15px; padding: 5px;">*For Any Question or Issue, You Can Call Helpline No. +91 7849085082.</p>
-    <p><a href = "tel:+917849085082" style = "padding: 5px 15px; background: #00c04b; text-decoration: none; color: #fff; border-radius: 5px;">CALL NOW</a></p>
+    <p style="font-size: 15px; padding: 5px;">*For Any Question or Issue, You Can Call Helpline No. +91 9064553236.</p>
+    <p><a href = "tel:+919064553236" style = "padding: 5px 15px; background: #00c04b; text-decoration: none; color: #fff; border-radius: 5px;">CALL NOW</a></p>
     </div>
   `;
 }
